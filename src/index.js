@@ -1,1 +1,1 @@
-console.log("hello world");
+const sayHello = (name) => `hello ${name}`;
