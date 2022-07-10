@@ -21,4 +21,12 @@ module.exports = {
       title: "webpack tutorial",
     }),
   ],
+  devServer: {
+    static: {
+      directory: path.resolve(__dirname, "dist"),
+    },
+    port: 3000,
+    open: true,
+    hot: true,
+  },
 };
