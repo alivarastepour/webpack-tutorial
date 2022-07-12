@@ -14,6 +14,7 @@ module.exports = {
   },
   module: {
     rules: [{ test: /\.ts$/, use: ["ts-loader"] }],
+    rules: [{ test: /\.css$/, use: ["style-loader", "css-loader"] }],
   },
   plugins: [
     new HtmlWebpackPlugin({
