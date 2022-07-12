@@ -13,8 +13,11 @@ module.exports = {
     filename: "bundle.js",
   },
   module: {
-    rules: [{ test: /\.ts$/, use: ["ts-loader"] }],
-    rules: [{ test: /\.css$/, use: ["style-loader", "css-loader"] }],
+    rules: [
+      { test: /\.ts$/, use: ["ts-loader"] },
+      { test: /\.css$/, use: ["style-loader", "css-loader"] },
+      { test: /\.(jpeg|jpg|png)$/, type: "asset/resource" },
+    ],
   },
   plugins: [
     new HtmlWebpackPlugin({
