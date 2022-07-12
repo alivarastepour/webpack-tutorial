@@ -1,9 +1,15 @@
 .salam {
   font-size: 2rem;
+  font-family: "bnazanin";
 }
 
 .pic {
   width: 400px;
   height: 400px;
   object-fit: cover;
+}
+
+@font-face {
+  font-family: "bnazanin";
+  src: url(./B-NAZANIN.TTF);
 }
