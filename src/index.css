@@ -1,3 +1,9 @@
 .salam {
   font-size: 2rem;
 }
+
+.pic {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+}
