@@ -11,6 +11,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "bundle.js",
+    clean: true, //this will automatically delete and rebuild dist folder on every build
   },
   module: {
     rules: [
@@ -35,4 +36,6 @@ module.exports = {
     open: true,
     hot: true,
   },
+
+  devtool: "inline-source-map", // using this tool will let us know the origin of problable errors in development phase
 };

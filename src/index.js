@@ -12,3 +12,5 @@ node.classList.add("pic");
 container.appendChild(node);
 
 console.log(Data);
+
+console.log(undefined.color);
