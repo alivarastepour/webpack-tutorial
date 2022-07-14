@@ -17,7 +17,8 @@ module.exports = {
       { test: /\.ts$/, use: ["ts-loader"] },
       { test: /\.css$/, use: ["style-loader", "css-loader"] },
       { test: /\.(jpeg|jpg|png)$/, type: "asset/resource" },
-      { test: /\.TTF$/, type: "asset/resource" }, // according to the webpack documentation this line is neccasry, however removing it didn't cause any problem
+      { test: /\.TTF$/, type: "asset/resource" },
+      { test: /\.csv$/, use: "csv-loader" },
     ],
   },
   plugins: [
