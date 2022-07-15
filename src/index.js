@@ -3,7 +3,7 @@ import photo from "./photo-1592853285454-34691b7b74c4.jpeg";
 import Data from "./index.csv";
 
 // import customFunc from "./sth";
-const f = import(/* webpackPrefetch: true */ "./sth").then((a) => a.default());
+const f = import(/* webpackPreload: true */ "./sth").then((a) => a.default()); // note that preloading and prefetching will result in separate js file in dist folder
 
 const container = document.getElementById("container");
 container.innerHTML = "سلام";
@@ -18,3 +18,4 @@ container.appendChild(node);
 console.log(Data);
 
 console.log(f);
+
