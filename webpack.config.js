@@ -11,7 +11,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "[name].[contenthash].js",
-    clean: true, //this will automatically delete and rebuild dist folder on every build
+    clean: true,
   },
   module: {
     rules: [
@@ -36,6 +36,19 @@ module.exports = {
     open: true,
     hot: true,
   },
-
-  devtool: "inline-source-map", // using this tool will let us know the origin of problable errors in development phase
+  optimization: {
+    runtimeChunk: "single", // this option is used to extract runtime logic to a separete chunk
+    moduleIds: "deterministic", // this option is used to avoid hashcontenet change in vendor chunk
+    // this option is used to split 3rd party libraries to a vendor chunk as they are less likely to change in local code
+    splitChunks: {
+      cacheGroups: {
+        vendor: {
+          test: /[\\/]node_modules[\\/]/,
+          name: "vendors",
+          chunks: "all",
+        },
+      },
+    },
+  },
+  devtool: "inline-source-map",
 };
