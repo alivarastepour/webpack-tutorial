@@ -1,6 +1,10 @@
 import "./index.css";
 import photo from "./photo-1592853285454-34691b7b74c4.jpeg";
 import Data from "./index.csv";
+
+// import customFunc from "./sth";
+const f = import(/* webpackPrefetch: true */ "./sth").then((a) => a.default());
+
 const container = document.getElementById("container");
 container.innerHTML = "سلام";
 container.style.color = "red";
@@ -13,4 +17,4 @@ container.appendChild(node);
 
 console.log(Data);
 
-console.log(undefined.color);
+console.log(f);
