@@ -1,6 +1,7 @@
 import "./index.css";
 import photo from "./photo-1592853285454-34691b7b74c4.jpeg";
 import Data from "./index.csv";
+import axios from "axios";
 
 // import customFunc from "./sth";
 const f = import(/* webpackPreload: true */ "./sth").then((a) => a.default()); // note that preloading and prefetching will result in separate js file in dist folder
@@ -19,3 +20,4 @@ console.log(Data);
 
 console.log(f);
 
+const d = axios.get;
